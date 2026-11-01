@@ -66,3 +66,11 @@ tema.addEventListener("click", function(){
 if (localStorage.getItem("tema") === "claro") {
     document.body.classList.add("claro");
 }
+
+const botaotopo = document.getElementById("voltartopo");
+
+botaotopo.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+    });
+});

@@ -172,3 +172,12 @@ body.claro {
     --texto: #222;
 }
 
+#voltartopo {
+    border: none;
+    background-color: #292929;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
