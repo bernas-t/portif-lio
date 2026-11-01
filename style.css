@@ -1,0 +1,174 @@
+:root {
+    --fundo: #1b0542;
+    --cartao: #0e8535;
+    --texto:  #f2f2f8;
+    --destaque: #aa0987b6;
+}
+/*afeta tudo que esta no body do html- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* 'a' seleciona todos os links usados
+    color vai mudar a cor dos links
+    text-decoration: none , remove o sublinhado do link
+*/
+a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+/* alterar os elementos header
+    display flex , organiza os elementos filhos (um fica do lado do outro)
+    padding = o espaço dentro da caixa (20 pixels em cima e embaixo e 8% dos lados)
+    position sticky, faz o cabeçalho acompanhar a rolagem na pagina
+    top : 0 , define o ponto
+    background evita que o conteudo passe por traz do cabeçalho
+     */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: var(--fundo);
+}
+
+/* pega todos o links dentro de "nav a" no html */
+nav a {
+    margin-left: 20px;
+}
+/* main seleciona o conteudo principal
+max width impede que uma linha fique muito larga em uma tela grande
+margin auto , distribui o espaço lateral para centralizar o conteudo
+padding cria uma margem pra o conteudo não encostar nas bordas
+*/
+main {
+    max-width: 1000;
+    margin: auto;
+    padding: 0 8%
+}
+
+/* padding cria um espaço interno entre uma seção e outra*/
+section {
+    padding: 60px  0;
+}
+
+/*font size controla o tamanho do texto e o clamp recebe 
+3 valores que são o tamanho mínimo ,preferível e o máximo */
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+/*não entendi bulhufas */
+.destaque {
+    color: var(--destaque)
+}
+
+/* alterar a foto 
+    width é a largura
+    aspect-ratio mantem a proporção de 1 pra 1
+    object-fit cover faz a imagem preencher a area sem ficar distorcida
+    border radius arredonda a caixa pra virar um circulo
+    border cria a uma borda de 3 pixels solida com a cor --destaque*/
+.foto {
+    width: 120px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--destaque);
+
+}
+
+/* display é a forma
+barckground é a cor do fundo do botao
+padding é a largura e altura do botao
+borer radius é pra arredondar o botao
+color é a cor do texto dentro do botao
+margin top é a margem acima do botao*/
+.botao {
+    display: inline-block;
+    background: var(--destaque);
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: var(--texto);
+    margin-top: 10px;
+}
+
+/*cards seleciona o agrupador dos cards
+display grid ativa o css grid, que é um sistema pra organizar linhas e colunas
+grid template columns define as colunas
+repeat repete uma regra
+auto fit calcula quantas colunas cabem no espaço da largura
+minmax diz que cada card deve ter no minimo 250 pixels e pode ocupar 1 fração do espaço disponivel
+
+gap cria um espaço entre as linhas e as colunas*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+/*alterar os cards individualmente
+transition suaviza a mudança de estado quanndo o mause passar por cima que vai ser implementada após*/
+.card {
+    background: var(--cartao);
+    padding: 24px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+/*:hover é um estado temporario como se fosse uma condição (pra quando o mause passar por cima)
+transform altera visualmente a forma/posição
+translatey move o card 6 pixels para cima*/
+.card:hover {
+    transform: translateY(-6px);
+    /*box-shadow faz uma "borda" na animação*/
+    box-shadow: 0 0 0 2px var(--destaque);
+}
+
+.card small {
+    color: var(--destaque);
+}
+
+/*alterar o rodapé / footer*/
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+}
+
+.filtros {
+    margin-bottom: 20px;
+}
+
+.filtro {
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 20px;
+/*cursor pointer transforma a seta do mause para a mão, indicando que pode clicar*/
+    cursor: pointer;
+}
+
+.filtro.ativo {
+    background: var(--destaque);
+    color: white;
+}
+
+#tema {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+body.claro {
+    --fundo: #f4f4f8;
+    --cartao: white;
+    --texto: #222;
+}
+

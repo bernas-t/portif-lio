@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"
+    rel="stylesheet">
+    <!--"rel=stylesheet" explica que esta ligando uma fonte de estilos-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Thiago | portifólio</title>
+</head>
+<body>
+    <header>
+        <strong>Thiago.</strong>
+        <nav>
+            <a href = #sobre>sobre</a>
+            <a href = #projetos>projetos</a>
+            <a href = #contato>contato</a>
+        </nav>
+        <button id="tema">Tema</button>
+    </header>
+    <main>
+        <section>
+            <img src="img/9a1491db-516e-458e-a583-29081390a980.jpg" alt ="gato padrao d+"
+            class="foto">
+            <h1><span id="saudacao"></span>, sou o Thiago. <span class="destaque">estou aprendendo</span></h1>
+            <p>Um aluno com muitas materias atrasadas</p>
+            <a href = "contato" class="botao">Fale comigo</a>
+        </section>
+
+        <section id="sobre">
+            <h2>sobre mim</h2>
+            <p> gosto de <strong>dormir</strong> e de
+            programar</p>
+<!--id serve pode servir para o javascript encontrar esse local-->
+            <ul id="habilidades"></ul>
+        </section>
+
+        <section id = "projetos">
+            <h2>projetos</h2>
+                <div class="filtros">
+                    <!--button serve pra disparar uma ação-->
+                    <button class="filtro ativo" 
+                    data-filtro="Todos">Todos</button>
+                    <button class="filtro" 
+                    data-filtro="Extensão">Extensão</button>
+                    <button class="filtro"
+                    data-filtro="Pesquisa">Pesquisa</button>
+                </div>
+                <div class="cards" id="cards"></div>
+            </div>
+        </section>
+        <section id="contato">
+            <a href="mailto:thiagofili124@gmail.com"
+            class="botao">G-mail</a>
+            <a href="www.linkedin.com/in/thiago-filipe-85643b398"
+            target="_blank" class="botao">LinkedIn</a>
+            <a href="https://www.instagram.com/_santos_thiagoo/"
+            target="_blank" class="botao">Instagram</a>
+<!--_blank faz abrir em outra pagina e não na pagina atual -->
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Thiago. Feito no minicurso de criação
+            de portifólios.
+        </p>
+<!-- &copy se transforma no simbolo do copyright-->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
