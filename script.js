@@ -22,7 +22,7 @@ for (const habilidade of habilidades) {
 const projetos = [
     {titulo: "Minicurso no CID", categoria:
     "Extensão" , texto:"Criação de portifólio"},
-    {titulo: "Iniciação científica", categoria:"pesquisa",
+    {titulo: "Iniciação científica", categoria:"Pesquisa",
     texto: "pesquisa sobre inclusão"},
     {titulo: "semana acadêmica", categoria:"Extensão",
     texto:"Apresentação de trabalho"}
